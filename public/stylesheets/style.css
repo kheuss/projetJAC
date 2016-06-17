@@ -1,0 +1,141 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 2, ../scss/layout/_accueil.scss */
+#header .entete-index {
+  background: #9d378d;
+  padding: 10px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+/* line 8, ../scss/layout/_accueil.scss */
+#header .form-recherche {
+  position: relative;
+}
+/* line 10, ../scss/layout/_accueil.scss */
+#header .form-recherche .submit-bouton {
+  border: medium none !important;
+  border-radius: 0 4px 4px 0;
+  height: 34px;
+  line-height: 20px;
+  padding: 9px;
+  position: absolute;
+  right: 16px;
+  top: 0;
+}
+/* line 21, ../scss/layout/_accueil.scss */
+#header .groupe-connexion {
+  float: right;
+}
+
+/* line 26, ../scss/layout/_accueil.scss */
+.contenu-accueil img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 35, ../scss/layout/_accueil.scss */
+.icon-connexion-form {
+  text-align: center;
+}
+/* line 37, ../scss/layout/_accueil.scss */
+.icon-connexion-form .icon-content {
+  background: #ddd none repeat scroll 0 0;
+  border-radius: 50%;
+  font-size: 45px;
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 10px;
+  width: 100px;
+  color: #337ab7;
+}
+/* line 47, ../scss/layout/_accueil.scss */
+.icon-connexion-form h4 {
+  font-size: 25px;
+}
+
+/* line 51, ../scss/layout/_accueil.scss */
+.form-conn-ins {
+  margin: auto;
+  width: 75%;
+  margin-top: 35px;
+}
+/* line 55, ../scss/layout/_accueil.scss */
+.form-conn-ins .form-group {
+  margin-bottom: 35px !important;
+}
+/* line 57, ../scss/layout/_accueil.scss */
+.form-conn-ins .form-group .col-sm-1 {
+  padding-left: 0px !important;
+}
+/* line 59, ../scss/layout/_accueil.scss */
+.form-conn-ins .form-group .col-sm-1 .tooltip {
+  background-color: #d9534f !important;
+  color: #fff;
+}
