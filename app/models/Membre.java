@@ -50,6 +50,11 @@ public class Membre extends Model {
     public String siteweb;
 
     /**
+        * Etat du membre
+    */
+    public int etat;
+
+    /**
      * Relation d'héritage entre Membe et Particulier
      */
     @OneToOne(mappedBy = "membre", cascade = CascadeType.ALL)
@@ -90,8 +95,8 @@ public class Membre extends Model {
      * Relation entre Membe et Groupe(appartenance)
      * Plusieurs peuvent appartenir à un Groupe
      */
-    @ManyToOne
-    public Groupe groupe;
+    @ManyToMany
+    public List<Groupe> groupeAppartenances;
 
     /**
      * Relation de création entre Membe et Groupe

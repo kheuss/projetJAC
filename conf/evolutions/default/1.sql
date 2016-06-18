@@ -7,6 +7,7 @@ create table amitie (
   id                            bigint auto_increment not null,
   membre_source_id              bigint,
   membre_cible_id               bigint,
+  accepte                       tinyint(1) default 0,
   constraint pk_amitie primary key (id)
 );
 
@@ -81,10 +82,16 @@ create table membre (
   adresse                       varchar(255),
   telephone                     varchar(255),
   siteweb                       varchar(255),
+  etat                          integer,
   profil_id                     bigint,
-  groupe_id                     bigint,
   constraint uq_membre_profil_id unique (profil_id),
   constraint pk_membre primary key (id)
+);
+
+create table membre_groupe (
+  membre_id                     bigint not null,
+  groupe_id                     bigint not null,
+  constraint pk_membre_groupe primary key (membre_id,groupe_id)
 );
 
 create table message (
@@ -155,8 +162,11 @@ create index ix_loisir_profil_id on loisir (profil_id);
 
 alter table membre add constraint fk_membre_profil_id foreign key (profil_id) references profil (id) on delete restrict on update restrict;
 
-alter table membre add constraint fk_membre_groupe_id foreign key (groupe_id) references groupe (id) on delete restrict on update restrict;
-create index ix_membre_groupe_id on membre (groupe_id);
+alter table membre_groupe add constraint fk_membre_groupe_membre foreign key (membre_id) references membre (id) on delete restrict on update restrict;
+create index ix_membre_groupe_membre on membre_groupe (membre_id);
+
+alter table membre_groupe add constraint fk_membre_groupe_groupe foreign key (groupe_id) references groupe (id) on delete restrict on update restrict;
+create index ix_membre_groupe_groupe on membre_groupe (groupe_id);
 
 alter table message add constraint fk_message_expediteur_id foreign key (expediteur_id) references membre (id) on delete restrict on update restrict;
 create index ix_message_expediteur_id on message (expediteur_id);
@@ -206,8 +216,11 @@ drop index ix_loisir_profil_id on loisir;
 
 alter table membre drop foreign key fk_membre_profil_id;
 
-alter table membre drop foreign key fk_membre_groupe_id;
-drop index ix_membre_groupe_id on membre;
+alter table membre_groupe drop foreign key fk_membre_groupe_membre;
+drop index ix_membre_groupe_membre on membre_groupe;
+
+alter table membre_groupe drop foreign key fk_membre_groupe_groupe;
+drop index ix_membre_groupe_groupe on membre_groupe;
 
 alter table message drop foreign key fk_message_expediteur_id;
 drop index ix_message_expediteur_id on message;
@@ -239,6 +252,8 @@ drop table if exists langue;
 drop table if exists loisir;
 
 drop table if exists membre;
+
+drop table if exists membre_groupe;
 
 drop table if exists message;
 

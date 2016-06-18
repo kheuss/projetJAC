@@ -69,16 +69,63 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 2, ../scss/layout/_accueil.scss */
 #header .entete-index {
-  background: #9d378d;
+  background: #672494;
   padding: 10px;
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
 /* line 8, ../scss/layout/_accueil.scss */
+#header .entete-page-personnelle {
+  background: #082246 !important;
+}
+/* line 10, ../scss/layout/_accueil.scss */
+#header .entete-page-personnelle .entete-page-personnelle-haut {
+  padding: 10px 7%;
+}
+/* line 12, ../scss/layout/_accueil.scss */
+#header .entete-page-personnelle .entete-page-personnelle-haut .groupe-icon {
+  text-align: right;
+}
+/* line 14, ../scss/layout/_accueil.scss */
+#header .entete-page-personnelle .entete-page-personnelle-haut .groupe-icon .glyphicon {
+  color: #fff;
+  font-size: 1.5em;
+  margin: 0 10px;
+}
+/* line 20, ../scss/layout/_accueil.scss */
+#header .entete-page-personnelle .entete-page-personnelle-haut .logo,
+#header .entete-page-personnelle .entete-page-personnelle-haut .form-recherche,
+#header .entete-page-personnelle .entete-page-personnelle-haut .groupe-icon {
+  display: inline-block;
+  float: none !important;
+  vertical-align: middle;
+  width: 32.333%;
+}
+/* line 28, ../scss/layout/_accueil.scss */
+#header .entete-page-personnelle .entete-page-personnelle-haut .form-recherche {
+  height: 35px;
+}
+/* line 32, ../scss/layout/_accueil.scss */
+#header .entete-page-personnelle .entete-page-personnelle-menu {
+  min-height: 40px;
+  background: #672494;
+}
+/* line 35, ../scss/layout/_accueil.scss */
+#header .entete-page-personnelle .entete-page-personnelle-menu .nav-gauche > li > a {
+  padding-bottom: 18px !important;
+  padding-top: 18px !important;
+}
+/* line 39, ../scss/layout/_accueil.scss */
+#header .entete-page-personnelle .entete-page-personnelle-menu .profil-bar {
+  padding: 6px;
+  background: #fff;
+  border-radius: 50%;
+}
+/* line 46, ../scss/layout/_accueil.scss */
 #header .form-recherche {
   position: relative;
 }
-/* line 10, ../scss/layout/_accueil.scss */
+/* line 48, ../scss/layout/_accueil.scss */
 #header .form-recherche .submit-bouton {
   border: medium none !important;
   border-radius: 0 4px 4px 0;
@@ -89,22 +136,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   right: 16px;
   top: 0;
 }
-/* line 21, ../scss/layout/_accueil.scss */
+/* line 59, ../scss/layout/_accueil.scss */
 #header .groupe-connexion {
   float: right;
 }
+/* line 62, ../scss/layout/_accueil.scss */
+#header .profil {
+  background: #ddd none repeat scroll 0 0;
+  border-radius: 50%;
+  font-size: 2em;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+}
 
-/* line 26, ../scss/layout/_accueil.scss */
+/* line 73, ../scss/layout/_accueil.scss */
 .contenu-accueil img {
   width: 100%;
   height: auto;
 }
 
-/* line 35, ../scss/layout/_accueil.scss */
+/* line 82, ../scss/layout/_accueil.scss */
 .icon-connexion-form {
   text-align: center;
 }
-/* line 37, ../scss/layout/_accueil.scss */
+/* line 84, ../scss/layout/_accueil.scss */
 .icon-connexion-form .icon-content {
   background: #ddd none repeat scroll 0 0;
   border-radius: 50%;
@@ -115,27 +172,82 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100px;
   color: #337ab7;
 }
-/* line 47, ../scss/layout/_accueil.scss */
+/* line 94, ../scss/layout/_accueil.scss */
 .icon-connexion-form h4 {
   font-size: 25px;
 }
 
-/* line 51, ../scss/layout/_accueil.scss */
+/* line 98, ../scss/layout/_accueil.scss */
 .form-conn-ins {
   margin: auto;
   width: 75%;
   margin-top: 35px;
 }
-/* line 55, ../scss/layout/_accueil.scss */
+/* line 102, ../scss/layout/_accueil.scss */
 .form-conn-ins .form-group {
   margin-bottom: 35px !important;
 }
-/* line 57, ../scss/layout/_accueil.scss */
+/* line 104, ../scss/layout/_accueil.scss */
 .form-conn-ins .form-group .col-sm-1 {
   padding-left: 0px !important;
 }
-/* line 59, ../scss/layout/_accueil.scss */
+/* line 106, ../scss/layout/_accueil.scss */
 .form-conn-ins .form-group .col-sm-1 .tooltip {
   background-color: #d9534f !important;
   color: #fff;
+}
+
+/* line 115, ../scss/layout/_accueil.scss */
+#contenu .contenu-page-personnelle {
+  background: #f4f4f4;
+  padding-top: 127px;
+  overflow: hidden;
+}
+/* line 119, ../scss/layout/_accueil.scss */
+#contenu .contenu-page-personnelle .entete-contenu {
+  position: relative;
+}
+/* line 121, ../scss/layout/_accueil.scss */
+#contenu .contenu-page-personnelle .entete-contenu img {
+  width: 100%;
+  height: 260px !important;
+}
+/* line 125, ../scss/layout/_accueil.scss */
+#contenu .contenu-page-personnelle .entete-contenu .gerer-photo-profil {
+  bottom: 25px;
+  color: #fff;
+  left: 25px;
+  position: absolute;
+  z-index: 1;
+}
+/* line 131, ../scss/layout/_accueil.scss */
+#contenu .contenu-page-personnelle .entete-contenu .gerer-photo-profil .profil-photo {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 50%;
+  color: #082246;
+  font-size: 1.5em;
+  padding: 20px;
+}
+/* line 140, ../scss/layout/_accueil.scss */
+#contenu .contenu-page-personnelle .sidebar-gauche {
+  padding-left: 15px;
+  padding-top: 30px;
+}
+/* line 143, ../scss/layout/_accueil.scss */
+#contenu .contenu-page-personnelle .sidebar-gauche h4 {
+  color: #082246;
+  font-size: 1em;
+}
+/* line 146, ../scss/layout/_accueil.scss */
+#contenu .contenu-page-personnelle .sidebar-gauche h4 .icon-sidebar {
+  background-color: #672494;
+  padding: 5px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.8em;
+  margin-right: 10px;
+}
+/* line 155, ../scss/layout/_accueil.scss */
+#contenu .contenu-page-personnelle .sidebar-gauche ul {
+  margin-left: 30px;
 }

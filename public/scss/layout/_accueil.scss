@@ -5,6 +5,44 @@
         margin-left:0 !important;
         margin-right:0 !important;
     }
+    .entete-page-personnelle{
+        background:$couleur-entete-haut !important;
+        .entete-page-personnelle-haut{
+            padding: 10px 7%;
+            .groupe-icon{
+                text-align:right;
+                .glyphicon{
+                    color:#fff;
+                    font-size:1.5em;
+                    margin:0 10px;
+                }
+            }
+            .logo,
+            .form-recherche,
+            .groupe-icon {
+                display: inline-block;
+                float: none !important;
+                vertical-align: middle;
+                width: 32.333%;
+            }
+            .form-recherche {
+                height: 35px;
+            }
+        }
+        .entete-page-personnelle-menu{
+            min-height:40px;
+            background:$couleur-entete;
+            .nav-gauche > li > a {
+                padding-bottom: 18px !important;
+                padding-top: 18px !important;
+            }
+            .profil-bar{
+                padding:6px;
+                background: #fff;
+                border-radius:50%;
+            }
+        }
+    }
     .form-recherche{
         position:relative;
         .submit-bouton{
@@ -20,6 +58,15 @@
     }
     .groupe-connexion {
         float: right;
+    }
+    .profil {
+        background: #ddd none repeat scroll 0 0;
+        border-radius: 50%;
+        font-size: 2em;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        width: 50px;
     }
 }
 .contenu-accueil {
@@ -59,6 +106,54 @@
             .tooltip{
                 background-color:$couleur-danger !important;
                 color:#fff;
+            }
+        }
+    }
+}
+
+#contenu{
+    .contenu-page-personnelle {
+        background: rgb(244, 244, 244);
+        padding-top:127px;
+        overflow:hidden;
+        .entete-contenu {
+            position:relative;
+            img{
+                width:100%;
+                height:260px !important;
+            }
+            .gerer-photo-profil {
+                bottom: 25px;
+                color: #fff;
+                left: 25px;
+                position: absolute;
+                z-index: 1;
+                .profil-photo {
+                    background: #fff none repeat scroll 0 0;
+                    border-radius: 50%;
+                    color: $couleur-entete-haut;
+                    font-size: 1.5em;
+                    padding: 20px;
+                }
+            }
+        }
+        .sidebar-gauche{
+            padding-left:15px;
+            padding-top:30px;
+            h4{
+                color:$couleur-entete-haut;
+                font-size:1em;
+                .icon-sidebar{
+                    background-color:$couleur-entete;
+                    padding:5px;
+                    border-radius:50%;
+                    color:#fff;
+                    font-size:0.8em;
+                    margin-right:10px;
+                }
+            }
+            ul{
+                margin-left:30px;
             }
         }
     }

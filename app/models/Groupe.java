@@ -36,7 +36,7 @@ public class Groupe extends Model {
      * Relation entre Groupe et Membre
      * la liste des tous les membres du groupe
      */
-    @OneToMany(mappedBy = "groupe")
+    @ManyToMany(mappedBy = "groupeAppartenances")
     public List<Membre> membres;
 
     /**
